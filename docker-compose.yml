@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  camel-build:
+    build: .
+    image: camel-build
+    container_name: camel-build
+    stdin_open: true
+    mem_limit: 4GB
+    volumes:
+      - ./git:/git
