@@ -13,34 +13,40 @@ Checkout this repository and copy the following files (not part of this reposito
 
 ## Building
 
-Build the image with the following command:
+Build the project with the following command:
 
 ```
-docker build --tag camel-build .
+docker-compose build
 ```
 
 ## Running
 
-Run the image with the following command:
+Run the the project with the following command:
 
 ```
-docker run --name camel-build --interactive --detach camel-build
+docker-compose up -d
 ```
 
-Login into image with the following command:
+Create a shell into the running container:
 
 ```
-docker exec -it camel-build bash
+docker-compose exec camel bash
 ```
 
 Stop the container with:
 
 ```
-docker stop camel-build
+docker-compose stop
 ```
 
 Resume the container with:
 
 ```
-docker start camel-build
+docker-compose start
+```
+
+Remove everything:
+
+```
+docker-compose down
 ```
