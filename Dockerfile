@@ -1,5 +1,7 @@
 FROM adoptopenjdk:8
 
+VOLUME [ "/git" ]
+
 RUN apt-get update && \
     apt-get clean
 
@@ -32,5 +34,5 @@ RUN chmod -R 600 /root/.gnupg/ && \
 COPY private/settings.xml private/settings-security.xml /root/.m2/
 COPY public/mavenrc /root/.mavenrc
 
-COPY public/clone-camel.sh /camel/init.sh
-RUN chmod +x /camel/init.sh
+COPY public/clone-camel.sh /root/clone-camel.sh
+RUN chmod +x /root/clone-camel.sh
