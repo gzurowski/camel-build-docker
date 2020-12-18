@@ -6,6 +6,5 @@ services:
     container_name: camel-build
     stdin_open: true
     tty: true
-    mem_limit: 4GB
     volumes:
-      - ./git:/git
+      - ./m2-repo:/root/.m2/repository
