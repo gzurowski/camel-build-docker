@@ -12,7 +12,7 @@
 	push-set-upstream = "!git push --set-upstream origin $(git branch --show-current)"
 
 [core]
-	pager = delta --light --keep-plus-minus-markers
+	pager = delta --dark --keep-plus-minus-markers
 
 [credential]
 	helper = store
@@ -21,7 +21,7 @@
     path = ~/.gitconfig_user
 
 [interactive]
-	diffFilter = delta --light --color-only --keep-plus-minus-markers
+	diffFilter = delta --dark --color-only --keep-plus-minus-markers
 
 [pull]
 	rebase = false
